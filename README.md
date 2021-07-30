@@ -16,7 +16,7 @@
 
 * 데이터베이스 계정 생성
 
-  [데이터베이스 sql문] : (https://github.com/Richsea/Auto_documentation_Project/blob/main/database.sql)
+  [데이터베이스 sql문](https://github.com/Richsea/Auto_documentation_Project/blob/main/database.sql)
 
 >sqlplus "/as sysdba"
 >
