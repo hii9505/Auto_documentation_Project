@@ -12,7 +12,7 @@ CREATE TABLE login
     pw VARCHAR2(15),
     name VARCHAR2(5),
     email VARCHAR2(20),
-    isadmin CHAR(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN ('0', '1'))
+    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1))
 );
 
 ``` emp ```
@@ -43,3 +43,5 @@ CREATE TABLE work_status
     start_time DATE,
     end_time DATE
 );
+
+COMMIT;

@@ -11,6 +11,7 @@
 | JSP    |            |
 | Tomcat | 9.0        |
 | Oracle | 11.2.0.2.0 |
+| jdbc   | ojdbc6     |
 
 
 
@@ -22,4 +23,6 @@
 >
 >> CREATE USER class4 identified by 1234;
 >> GRANT CONNECT, RESOURCE, DBA TO class4;
+
+
 
