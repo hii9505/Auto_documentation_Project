@@ -8,5 +8,6 @@
 </head>
 <body>
 	<p> This is Main Page </p>
+	<%response.sendRedirect("http://localhost:8181/Auto_Documentation/SignUpServlet?command=SignUp"); %>
 </body>
 </html>

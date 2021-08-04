@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="get" action="../SignUpServlet" name="frm">
+	<form method="get" action="LoginServlet" name="frm">
 		<input type="hidden" name="command" value="SignUp">
 		ID* : <input type="text" name="id"> <input type="button" name="overlapCheck" value="중복 확인"><br>
 		Password* : <input type="password" name="pwd"><br>

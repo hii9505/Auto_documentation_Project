@@ -32,7 +32,10 @@ public class SignUpDAO{
 			psmt.setString(2, signUpVO.getPW());
 			psmt.setString(3, signUpVO.getName());
 			psmt.setString(4, signUpVO.getEmail());
-			psmt.setInt(5, (signUpVO.getIsAdmin() ? 1 : 0));			
+			psmt.setInt(5, (signUpVO.getIsAdmin() ? 1 : 0));
+			int isupdate = psmt.executeUpdate();
+			
+			System.out.println(isupdate);
 		}
 		catch(SQLException e)
 		{

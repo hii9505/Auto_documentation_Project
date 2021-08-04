@@ -22,7 +22,15 @@
 >sqlplus "/as sysdba"
 >
 >> CREATE USER class4 identified by 1234;
+>>
 >> GRANT CONNECT, RESOURCE, DBA TO class4;
+
+
+
+* Java build path 설정
+  1. property - Java Build Path - add - servlet-api.jar
+  2. property - Java Build Path - add - ojdbc6.jar
+  3. property - Deployment Assembly - add - Java Build Path Entries - ojdbc6.jar
 
 
 
