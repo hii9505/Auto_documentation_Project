@@ -10,9 +10,9 @@ CREATE TABLE login
 (
     id VARCHAR2(10) PRIMARY KEY,
     pw VARCHAR2(15),
-    name VARCHAR2(5),
+    name VARCHAR2(10),
     email VARCHAR2(20),
-    isadmin CHAR(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN ('0', '1'))
+    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1))
 );
 
 ``` emp ```
@@ -27,7 +27,7 @@ CREATE TABLE emp
 CREATE TABLE private_info
 (
     empno VARCHAR2(7) PRIMARY KEY,
-    name VARCHAR2(5) NOT NULL,
+    name VARCHAR2(10) NOT NULL,
     emp VARCHAR2(10),
     position VARCHAR2(6) DEFAULT '사원',
     phone NUMBER(11),
@@ -43,3 +43,5 @@ CREATE TABLE work_status
     start_time DATE,
     end_time DATE
 );
+
+COMMIT;
