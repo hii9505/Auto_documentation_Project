@@ -8,8 +8,8 @@
 </head>
 <body>
 <%
-//response.sendRedirect("http://localhost:8181/Auto_Documentation/SignUpServlet?command=SignUp");
-response.sendRedirect("http://localhost:8181/Auto_Documentation/LoginServlet?command=SignUpForm");
+response.sendRedirect("http://localhost:8181/Auto_Documentation/LoginServlet?command=LoginForm");
+//response.sendRedirect("http://localhost:8181/Auto_Documentation/LoginServlet?command=SignUpForm");
 %>
 </body>
 </html>

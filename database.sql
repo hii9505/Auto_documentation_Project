@@ -12,7 +12,9 @@ CREATE TABLE login
     pw VARCHAR2(15),
     name VARCHAR2(10),
     email VARCHAR2(20),
-    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1))
+    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1)),
+    empno VARCHAR2(7),
+    UNIQUE(empno)
 );
 
 ``` emp ```

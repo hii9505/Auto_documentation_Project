@@ -1,4 +1,4 @@
-package Controller.action;
+package Controller.action.login;
 
 import java.io.IOException;
 
@@ -7,8 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.SignUpDAO;
-import VO.SignUpVO;
+import Controller.action.Action;
+import DAO.login.SignUpDAO;
+import VO.login.SignUpVO;
 
 public class SignUpAction implements Action{
 

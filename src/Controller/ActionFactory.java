@@ -1,9 +1,10 @@
 package Controller;
 
 import Controller.action.Action;
-import Controller.action.LoginAction;
-import Controller.action.SignUpAction;
-import Controller.action.SignUpFormAction;
+import Controller.action.login.LoginAction;
+import Controller.action.login.LoginFormAction;
+import Controller.action.login.SignUpAction;
+import Controller.action.login.SignUpFormAction;
 
 public class ActionFactory {
 	private static ActionFactory instance = new ActionFactory();
@@ -35,7 +36,10 @@ public class ActionFactory {
 		{
 			action = new LoginAction();
 		}
-		
+		else if(command.contentEquals("LoginForm"))
+		{
+			action = new LoginFormAction();
+		}
 		
 		return action;
 	}
