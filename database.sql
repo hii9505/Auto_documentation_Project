@@ -28,7 +28,7 @@ CREATE TABLE private_info
 (
     empno VARCHAR2(7) PRIMARY KEY,
     name VARCHAR2(10) NOT NULL,
-    emp VARCHAR2(10),
+    emp VARCHAR2(15),
     position VARCHAR2(6) DEFAULT '사원',
     phone NUMBER(11),
     entryDate DATE,
