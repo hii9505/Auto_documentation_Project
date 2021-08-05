@@ -2,13 +2,13 @@ package Controller.action.login;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import Controller.action.Action;
-import Controller.action.MainPageFormAction;
+import Controller.action.mypage.MyPageFormAction;
 import DAO.login.LoginDAO;
 import VO.login.LoginVO;
 
@@ -22,10 +22,10 @@ public class LoginAction implements Action{
 		
 		LoginDAO loginDao = LoginDAO.getInstance();
 		
-		String empno = loginDao.selectLogin(loginVO);
+		String id = loginDao.selectLogin(loginVO);
 		
 		// DB 실행 결과 없음 :: DB에 일치하는 {id, pw}가 없음.
-		if(empno == null)
+		if(id == null)
 		{
 			LoginFormAction action = new LoginFormAction();
 			action.setError(1);
@@ -33,8 +33,9 @@ public class LoginAction implements Action{
 		}
 		else
 		{
-			MainPageFormAction action = new MainPageFormAction();
-			action.setEmpno(empno);
+			HttpSession session = request.getSession();
+			session.setAttribute("ID", id);
+			MyPageFormAction action = new MyPageFormAction();
 			action.execute(request, response);
 		}
 	}

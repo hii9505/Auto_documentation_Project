@@ -13,8 +13,6 @@ CREATE TABLE login
     name VARCHAR2(10),
     email VARCHAR2(20),
     isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1)),
-    empno VARCHAR2(7),
-    UNIQUE(empno)
 );
 
 ``` emp ```
@@ -33,7 +31,8 @@ CREATE TABLE private_info
     emp VARCHAR2(10),
     position VARCHAR2(6) DEFAULT '사원',
     phone NUMBER(11),
-    entryDate DATE
+    entryDate DATE,
+    id VARCHAR2(10) UNIQUE NOT NULL
 );
 
 ``` work_status ```

@@ -5,16 +5,18 @@ import Controller.action.login.LoginAction;
 import Controller.action.login.LoginFormAction;
 import Controller.action.login.SignUpAction;
 import Controller.action.login.SignUpFormAction;
+import Controller.action.mypage.MyPageAction;
+import Controller.action.mypage.MyPageFormAction;
 
-public class ActionFactory {
-	private static ActionFactory instance = new ActionFactory();
+public class LoginActionFactory {
+	private static LoginActionFactory instance = new LoginActionFactory();
 	
-	private ActionFactory()
+	private LoginActionFactory()
 	{
 		super();
 	}
 	
-	public static ActionFactory getInstance()
+	public static LoginActionFactory getInstance()
 	{
 		return instance;
 	}
@@ -22,7 +24,7 @@ public class ActionFactory {
 	public Action getAction(String command)
 	{
 		Action action = null;
-		System.out.println("ActionFactory :" + command);
+		System.out.println("LoginActionFactory :" + command);
 		
 		if(command.contentEquals("SignUp"))
 		{
@@ -39,6 +41,14 @@ public class ActionFactory {
 		else if(command.contentEquals("LoginForm"))
 		{
 			action = new LoginFormAction();
+		}
+		else if(command.contentEquals("Mypage"))
+		{
+			action = new MyPageAction();
+		}
+		else if(command.contentEquals("MypageForm"))
+		{
+			action = new MyPageFormAction();
 		}
 		
 		return action;

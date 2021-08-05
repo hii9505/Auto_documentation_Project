@@ -14,6 +14,7 @@ public class MainPageFormAction implements Action{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
 		String url = "/MainPage/MainPage.jsp";
+		
 		request.setAttribute("EMPNO", getEmpno());
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);

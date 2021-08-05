@@ -1,4 +1,4 @@
-package VO;
+package VO.login;
 
 public class SignUpVO {
 	private String id;

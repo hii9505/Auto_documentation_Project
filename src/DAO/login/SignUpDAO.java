@@ -1,10 +1,10 @@
-package DAO;
+package DAO.login;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import VO.SignUpVO;
+import VO.login.SignUpVO;
 import util.DBManager;
 
 public class SignUpDAO{
@@ -33,13 +33,12 @@ public class SignUpDAO{
 			psmt.setString(3, signUpVO.getName());
 			psmt.setString(4, signUpVO.getEmail());
 			psmt.setInt(5, (signUpVO.getIsAdmin() ? 1 : 0));
-			int isupdate = psmt.executeUpdate();
-			
-			System.out.println(isupdate);
+			psmt.executeUpdate();
 		}
 		catch(SQLException e)
 		{
 			e.printStackTrace();
+			System.out.println("쿼리 실패");
 		}
 		finally {
 			try
