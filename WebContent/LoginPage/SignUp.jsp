@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sign up Page</title>
 </head>
 <body>
 	<form method="get" action="LoginServlet" name="frm">
