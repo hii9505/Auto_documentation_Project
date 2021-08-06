@@ -7,7 +7,7 @@ public class MyPageVO {
 	private String name;
 	private String emp;
 	private String position;
-	private long phone;
+	private String phone;
 	private Date entrydate;
 	private String id;
 	
@@ -43,11 +43,11 @@ public class MyPageVO {
 	{
 		return position;
 	}
-	public void setPhone(long phone)
+	public void setPhone(String phone)
 	{
 		this.phone = phone;
 	}
-	public long getPhone()
+	public String getPhone()
 	{
 		return phone;
 	}

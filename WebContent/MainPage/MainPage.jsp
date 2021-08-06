@@ -12,9 +12,9 @@
 	<br>
 	<input type="button" value="My Page" onclick="location.href='MainPageServlet?command=MypageView'">
 	<br>
-	<input type="button" value="My document" onclick="location.href='MainPageServlet?command=MydocumentForm'">
+	<input type="button" value="My document" onclick="location.href='MainPageServlet?command=MydocumentListForm'">
 	<br>
-	<input type="button" value="출퇴근" onclick="location.href='MainPageServlet?command=MyCommuteForm'">
+	<input type="button" value="출퇴근" onclick="location.href='MainPageServlet?command=MyCommute'">
 	<br>
 </body>
 </html>

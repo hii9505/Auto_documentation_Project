@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import Controller.action.Action;
+import Controller.action.MainPageFormAction;
 import DAO.mypage.MyPageDAO;
 import VO.mypage.MyPageVO;
 
@@ -23,12 +24,17 @@ public class MyPageAction implements Action{
 		mypageVo.setName(request.getParameter("name"));
 		mypageVo.setEmp(request.getParameter("emp"));
 		mypageVo.setPosition(request.getParameter("position"));
-		mypageVo.setPhone(Long.parseLong(request.getParameter("phone1") + request.getParameter("phone2") + request.getParameter("phone3")));
+		mypageVo.setPhone(request.getParameter("phone1") + request.getParameter("phone2") + request.getParameter("phone3"));
 		mypageVo.setEntryDate(Date.valueOf(request.getParameter("entrydate")));
 		mypageVo.setID((String)session.getAttribute("ID"));
 		
+		session.setAttribute("EMPNO", mypageVo.getEmpno());
+		
 		MyPageDAO mypageDao = MyPageDAO.getInstance();
-		mypageDao.insertMypage(mypageVo);
+		if(((String)request.getAttribute("DB_EXIST")).equals("1"))
+			mypageDao.updateMypage(mypageVo);
+		else
+			mypageDao.insertMypage(mypageVo);
 		
 		new MainPageFormAction().execute(request, response);
 	}

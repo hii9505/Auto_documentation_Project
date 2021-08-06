@@ -30,7 +30,7 @@ CREATE TABLE private_info
     name VARCHAR2(10) NOT NULL,
     emp VARCHAR2(15),
     position VARCHAR2(6) DEFAULT '사원',
-    phone NUMBER(11),
+    phone VARCHAR2(11),
     entryDate DATE,
     id VARCHAR2(10) UNIQUE NOT NULL
 );
