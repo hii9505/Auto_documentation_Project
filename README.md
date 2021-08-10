@@ -15,25 +15,37 @@
 
 
 
-* 데이터베이스 계정 생성
+[데이터베이스 계정 생성]
 
-  [데이터베이스 sql문](https://github.com/Richsea/Auto_documentation_Project/blob/main/database.sql)
+* oracle version < 12c
 
 >sqlplus "/as sysdba"
 >
->> CREATE USER class4 identified by 1234;
+>> CREATE USER class4 IDENTIFIED BY 1234;
 >>
 >> GRANT CONNECT, RESOURCE, DBA TO class4;
 
+* oracle version > 12c
+
+>sqlplus "/as sysdba"
+>
+>> CREATE USER C##class4 IDENTIFIED BY 1234;
+>
+>> GRANT CONNECT, RESOURCE, DBA TO C##class4;
+
+* [데이터베이스 sql문](https://github.com/Richsea/Auto_documentation_Project/blob/main/database.sql)
 
 
-* Java build path 설정
-  1. property - Java Build Path - add - servlet-api.jar
-  2. property - Java Build Path - add - ojdbc6.jar
-  3. property - Deployment Assembly - add - Java Build Path Entries - ojdbc6.jar
+
+[Java build path 설정]
+
+1. property - Java Build Path - add - servlet-api.jar
+2. property - Java Build Path - add - ojdbc6.jar
+3. property - Deployment Assembly - add - Java Build Path Entries - ojdbc6.jar
 
 
 
-* 시작
-  * index.jsp로 시작
+[시작]
+
+* index.jsp로 시작
 
