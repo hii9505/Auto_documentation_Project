@@ -108,7 +108,7 @@ public class MyPageDAO {
 	// mypage update문 (LoginPage에서 MyPage 접속 후 수정 시 호출)
 	public void updateMypage(MyPageVO mypageVo)
 	{
-		String sql = "UPDATE private_info"
+		String sql = "UPDATE private_info "
 				+ "SET "
 				+ "empno = ?, name = ?, emp = ?, position = ?, phone = ?, entrydate = ?"
 				+ "WHERE id=?";
@@ -117,6 +117,8 @@ public class MyPageDAO {
 		
 		try
 		{
+			conn = new DBManager().dbconnect();
+			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, mypageVo.getEmpno());
 			pstmt.setString(2, mypageVo.getName());
 			pstmt.setString(3, mypageVo.getEmp());

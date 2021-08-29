@@ -32,11 +32,10 @@ public class MyPageFormAction implements Action{
 		request.setAttribute("PHONE", mypageVo.getPhone());
 		request.setAttribute("ENTRYDATE", mypageVo.getEntryDate());
 		
-		
 		if(mypageVo.getEmpno() != null)
-			request.setAttribute("DB_EXIST", "1");
+			session.setAttribute("DB_EXIST", "1");
 		else
-			request.setAttribute("DB_EXIST", "0");
+			session.setAttribute("DB_EXIST", "0");
 		
 		String url = "/MyPage/MyPage.jsp";	
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
