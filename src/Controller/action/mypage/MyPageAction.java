@@ -31,7 +31,6 @@ public class MyPageAction implements Action{
 		session.setAttribute("EMPNO", mypageVo.getEmpno());
 		
 		MyPageDAO mypageDao = MyPageDAO.getInstance();
-		String temp = (String)session.getAttribute("DB_EXIST");
 		if(((String)session.getAttribute("DB_EXIST")).equals("1"))
 			mypageDao.updateMypage(mypageVo);
 		else
