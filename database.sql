@@ -41,8 +41,8 @@ CREATE TABLE work_status
     empno VARCHAR2(7) PRIMARY KEY,
     workhour NUMBER(2) DEFAULT 0,
     situation VARCHAR2(6) DEFAULT '퇴근',
-    start_time DATE,
-    end_time DATE
+    start_time VARCHAR2(5),
+    end_time VARCHAR2(5)
 );
 
 COMMIT;
