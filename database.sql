@@ -12,15 +12,14 @@ CREATE TABLE login
     pw VARCHAR2(15),
     name VARCHAR2(10),
     email VARCHAR2(20),
-    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1)),
+    isadmin NUMBER(1) CONSTRAINT boolean_verified_check CHECK(isadmin IN (0, 1))
 );
 
 ``` emp ```
 CREATE TABLE emp
 (
-    name VARCHAR2(10) PRIMARY KEY,
-    empno VARCHAR2(3),
-    manager VARCHAR2(5) NOT NULL
+    name VARCHAR2(15) PRIMARY KEY,
+    manager VARCHAR2(10) NOT NULL
 );
 
 ``` private_info ```
